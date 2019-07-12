@@ -1,0 +1,4 @@
+module "guard" {
+  source            = "../../"
+
+}
