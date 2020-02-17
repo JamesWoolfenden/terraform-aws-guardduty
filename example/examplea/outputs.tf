@@ -1,4 +1,4 @@
 output "GuardDuty" {
+  value = module.guard.GuardDuty
   description = "The GuardDuty detector"
-  value       = aws_guardduty_detector.master
 }
