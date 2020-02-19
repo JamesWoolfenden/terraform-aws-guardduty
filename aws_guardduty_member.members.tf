@@ -1,3 +1,4 @@
+
 resource "aws_guardduty_member" "members" {
   count              = var.member_list_count
   account_id         = lookup(var.member_list[count.index], "account_id")

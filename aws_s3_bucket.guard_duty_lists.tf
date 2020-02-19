@@ -1,6 +1,5 @@
-
 resource "aws_s3_bucket" "guard_duty_lists" {
-  count  = "${(var.threat_intel_list_path == "") && (var.ip_set_list_path == "")  ? 0 : 1}"
+  count  = (var.threat_intel_list_path == "") && (var.ip_set_list_path == "") ? 0 : 1
   bucket = "${local.account_name}-guardduty-lists"
 
   lifecycle {
@@ -8,7 +7,7 @@ resource "aws_s3_bucket" "guard_duty_lists" {
   }
 
   logging {
-    target_bucket = "${data.aws_s3_bucket.log_bucket.id}"
+    target_bucket = data.aws_s3_bucket.log_bucket.id
     target_prefix = "s3/guard_duty/"
   }
 

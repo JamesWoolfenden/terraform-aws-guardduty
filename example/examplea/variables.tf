@@ -64,5 +64,5 @@ variable "threat_intel_list_path" {
 }
 
 variable "common_tags" {
-  type = map
+  type=map
 }
