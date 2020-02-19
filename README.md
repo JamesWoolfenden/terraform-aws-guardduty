@@ -1,4 +1,4 @@
-# terraform-aws-guardduty
+# terraform-aws-guardduty [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 Sets up guard duty in the Master account with trusted IP and threat lists, can invite member accounts
 forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
