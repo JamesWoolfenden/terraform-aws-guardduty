@@ -20,7 +20,7 @@ resource "aws_s3_bucket" "guard_duty_lists" {
   }
 
   versioning {
-    enabled = true
+    enabled    = true
+    mfa_delete = var.mfa_delete
   }
 }
-

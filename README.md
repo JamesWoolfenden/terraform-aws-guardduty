@@ -6,16 +6,20 @@ forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
 <https://aws.amazon.com/guardduty/>
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
-forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
+
 | Name | Version |
 |------|---------|
 | aws | n/a |
 
 ## Inputs
-<https://aws.amazon.com/guardduty/>
+
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | account\_name | The account name. Used as a prefix to name resources. | `string` | `""` | no |
 | common\_tags | n/a | `map` | n/a | yes |
 | enable | Enable/Disable guardduty.You can set the enable attribute to false for suspend monitoring and feedback reporting while keeping existing data. | `bool` | `true` | no |
@@ -25,6 +29,7 @@ forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
 | log\_bucket | Account level Log bucket id | `string` | n/a | yes |
 | member\_list | The list of member accounts to be added. Each member list need to have values of account\_id, member\_email and invite boolean | `list` | `[]` | no |
 | member\_list\_count | The count of members to be added to this master guard duty | `string` | `0` | no |
+| mfa\_delete | n/a | `bool` | `true` | no |
 | threat\_intel\_list\_path | The path of the Threat intel file | `string` | `""` | no |
 | threat\_intel\_set\_active | Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet | `string` | `false` | no |
 | threat\_intel\_set\_format | The format of the file that contains the ThreatIntelSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
@@ -88,8 +93,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-staticsite&url=https://github.com/JamesWoolfenden/terraform-aws-staticsite
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-staticsite&url=https://github.com/JamesWoolfenden/terraform-aws-staticsite
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/JamesWoolfenden/terraform-aws-staticsite
