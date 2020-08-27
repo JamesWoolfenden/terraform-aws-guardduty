@@ -1,4 +1,16 @@
-# terraform-aws-guardduty [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
+# terraform-aws-guardduty
+
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-guardduty/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-guardduty)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-guardduty.svg)](https://github.com/JamesWoolfenden/terraform-aws-guardduty/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+
+---
+
+It's 100% Open Source and licensed under the [APACHE2](LICENSE).
+
+## Introduction
 
 Sets up guard duty in the Master account with trusted IP and threat lists, can invite member accounts
 forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
