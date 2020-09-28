@@ -17,7 +17,6 @@ forked from git@github.com:QuiNovas/terraform-aws-guardduty.git
 <https://aws.amazon.com/guardduty/>
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -25,31 +24,31 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                    | Description                                                                                                                                   | Type     | Default | Required |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------- | :------: |
-| account_name            | The account name. Used as a prefix to name resources.                                                                                         | `string` | `""`    |    no    |
-| common_tags             | n/a                                                                                                                                           | `map`    | n/a     |   yes    |
-| enable                  | Enable/Disable guardduty.You can set the enable attribute to false for suspend monitoring and feedback reporting while keeping existing data. | `bool`   | `true`  |    no    |
-| ip_set_active           | Specifies whether GuardDuty is to start using the uploaded IPSet                                                                              | `string` | `false` |    no    |
-| ip_set_format           | The format of the file that contains the IPSet. Valid values: TXT \| STIX \| OTX_CSV \| ALIEN_VAULT \| PROOF_POINT \| FIRE_EYE                | `string` | `"TXT"` |    no    |
-| ip_set_list_path        | The path of the IP safe list file                                                                                                             | `string` | `""`    |    no    |
-| log_bucket              | Account level Log bucket id                                                                                                                   | `string` | n/a     |   yes    |
-| member_list             | The list of member accounts to be added. Each member list need to have values of account_id, member_email and invite boolean                  | `list`   | `[]`    |    no    |
-| member_list_count       | The count of members to be added to this master guard duty                                                                                    | `string` | `0`     |    no    |
-| mfa_delete              | n/a                                                                                                                                           | `bool`   | `true`  |    no    |
-| threat_intel_list_path  | The path of the Threat intel file                                                                                                             | `string` | `""`    |    no    |
-| threat_intel_set_active | Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet                                                                     | `string` | `false` |    no    |
-| threat_intel_set_format | The format of the file that contains the ThreatIntelSet. Valid values: TXT \| STIX \| OTX_CSV \| ALIEN_VAULT \| PROOF_POINT \| FIRE_EYE       | `string` | `"TXT"` |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| account\_name | The account name. Used as a prefix to name resources. | `string` | `""` | no |
+| common\_tags | n/a | `map` | n/a | yes |
+| enable | Enable/Disable guardduty.You can set the enable attribute to false for suspend monitoring and feedback reporting while keeping existing data. | `bool` | `true` | no |
+| ip\_set\_active | Specifies whether GuardDuty is to start using the uploaded IPSet | `string` | `false` | no |
+| ip\_set\_format | The format of the file that contains the IPSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
+| ip\_set\_list\_path | The path of the IP safe list file | `string` | `""` | no |
+| log\_bucket | Account level Log bucket id | `string` | n/a | yes |
+| member\_list | The list of member accounts to be added. Each member list need to have values of account\_id, member\_email and invite boolean | `list` | `[]` | no |
+| member\_list\_count | The count of members to be added to this master guard duty | `string` | `0` | no |
+| mfa\_delete | n/a | `bool` | `true` | no |
+| threat\_intel\_list\_path | The path of the Threat intel file | `string` | `""` | no |
+| threat\_intel\_set\_active | Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet | `string` | `false` | no |
+| threat\_intel\_set\_format | The format of the file that contains the ThreatIntelSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
 
 ## Outputs
 
-| Name      | Description            |
-| --------- | ---------------------- |
+| Name | Description |
+|------|-------------|
 | GuardDuty | The GuardDuty detector |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
