@@ -12,7 +12,7 @@ variable "enable" {
 
 variable "member_list" {
   description = "The list of member accounts to be added. Each member list need to have values of account_id, member_email and invite boolean"
-  type        = list
+  type        = list(any)
   default     = []
 }
 
@@ -64,5 +64,5 @@ variable "threat_intel_list_path" {
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }

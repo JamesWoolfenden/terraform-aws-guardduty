@@ -31,18 +31,37 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
+| [aws_guardduty_detector](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_detector) |
+| [aws_guardduty_ipset](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_ipset) |
+| [aws_guardduty_member](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_member) |
+| [aws_guardduty_threatintelset](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_threatintelset) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_s3_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/s3_bucket) |
+| [aws_s3_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) |
+| [aws_s3_bucket_object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object) |
+| [aws_s3_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | account\_name | The account name. Used as a prefix to name resources. | `string` | `""` | no |
-| common\_tags | n/a | `map` | n/a | yes |
+| common\_tags | n/a | `map(any)` | n/a | yes |
 | enable | Enable/Disable guardduty.You can set the enable attribute to false for suspend monitoring and feedback reporting while keeping existing data. | `bool` | `true` | no |
 | ip\_set\_active | Specifies whether GuardDuty is to start using the uploaded IPSet | `string` | `false` | no |
 | ip\_set\_format | The format of the file that contains the IPSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
 | ip\_set\_list\_path | The path of the IP safe list file | `string` | `""` | no |
 | log\_bucket | Account level Log bucket id | `string` | n/a | yes |
-| member\_list | The list of member accounts to be added. Each member list need to have values of account\_id, member\_email and invite boolean | `list` | `[]` | no |
+| member\_list | The list of member accounts to be added. Each member list need to have values of account\_id, member\_email and invite boolean | `list(any)` | `[]` | no |
 | member\_list\_count | The count of members to be added to this master guard duty | `string` | `0` | no |
 | mfa\_delete | n/a | `bool` | `true` | no |
 | threat\_intel\_list\_path | The path of the Threat intel file | `string` | `""` | no |
@@ -54,7 +73,6 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | GuardDuty | The GuardDuty detector |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
