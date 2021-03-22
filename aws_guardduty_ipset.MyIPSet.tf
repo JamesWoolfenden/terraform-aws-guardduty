@@ -7,5 +7,3 @@ resource "aws_guardduty_ipset" "MyIPSet" {
   location    = "https://s3.amazonaws.com/${aws_s3_bucket_object.MyIPSet.0.bucket}/${aws_s3_bucket_object.MyIPSet.0.key}"
   name        = "MyIPSet"
 }
-
-

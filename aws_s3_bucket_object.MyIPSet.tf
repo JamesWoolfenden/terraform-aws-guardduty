@@ -5,4 +5,3 @@ resource "aws_s3_bucket_object" "MyIPSet" {
   source = var.ip_set_list_path
   etag   = md5(file("${var.ip_set_list_path}"))
 }
-
