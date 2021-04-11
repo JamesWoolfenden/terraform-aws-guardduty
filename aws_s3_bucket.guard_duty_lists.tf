@@ -1,4 +1,7 @@
 resource "aws_s3_bucket" "guard_duty_lists" {
+  # checkov:skip=CKV_AWS_144:
+  # checkov:skip=CKV_AWS_145:
+
   count  = (var.threat_intel_list_path == "") && (var.ip_set_list_path == "") ? 0 : 1
   bucket = "${local.account_name}-guardduty-lists"
 
