@@ -25,8 +25,8 @@ data "aws_iam_policy_document" "guard_duty_lists" {
     }
 
     resources = [
-      "${element(concat(aws_s3_bucket.guard_duty_lists.*.arn, list("")), 0)}",
-      "${element(concat(aws_s3_bucket.guard_duty_lists.*.arn, list("")), 0)}/*",
+      "${element(concat(aws_s3_bucket.guard_duty_lists.*.arn, tolist([""])), 0)}",
+      "${element(concat(aws_s3_bucket.guard_duty_lists.*.arn, tolist([""])), 0)}/*",
     ]
 
     sid = "DenyUnsecuredTransport"
