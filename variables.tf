@@ -63,9 +63,6 @@ variable "threat_intel_list_path" {
   type        = string
 }
 
-variable "common_tags" {
-  type = map(any)
-}
 
 variable "mfa_delete" {
   type    = bool

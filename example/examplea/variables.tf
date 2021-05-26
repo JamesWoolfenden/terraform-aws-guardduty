@@ -62,7 +62,3 @@ variable "threat_intel_list_path" {
   default     = ""
   type        = string
 }
-
-variable "common_tags" {
-  type = map(any)
-}
