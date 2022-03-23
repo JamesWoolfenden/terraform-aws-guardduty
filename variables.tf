@@ -65,6 +65,10 @@ variable "threat_intel_list_path" {
 
 
 variable "mfa_delete" {
-  type    = bool
-  default = true
+  type    = string
+  default = "Disabled"
+}
+
+variable "kms_key" {
+
 }

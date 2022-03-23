@@ -3,6 +3,6 @@ resource "aws_guardduty_threatintelset" "MyThreatIntelSet" {
   activate    = var.threat_intel_set_active
   detector_id = aws_guardduty_detector.master.id
   format      = var.threat_intel_set_format
-  location    = "https://s3.amazonaws.com/${aws_s3_bucket_object.MyThreatIntelSet.0.bucket}/${aws_s3_bucket_object.MyThreatIntelSet.0.key}"
+  location    = "https://s3.amazonaws.com/${aws_s3_object.MyThreatIntelSet.0.bucket}/${aws_s3_object.MyThreatIntelSet.0.key}"
   name        = "MyThreatIntelSet"
 }

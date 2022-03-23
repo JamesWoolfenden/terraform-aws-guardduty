@@ -46,11 +46,15 @@ No modules.
 | [aws_guardduty_threatintelset.MyThreatIntelSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_threatintelset) | resource |
 | [aws_s3_bucket.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
 | [aws_s3_bucket.logging](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
-| [aws_s3_bucket_object.MyIPSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object) | resource |
-| [aws_s3_bucket_object.MyThreatIntelSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object) | resource |
+| [aws_s3_bucket_logging.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_logging) | resource |
 | [aws_s3_bucket_policy.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) | resource |
 | [aws_s3_bucket_public_access_block.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
 | [aws_s3_bucket_public_access_block.logging](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.logging](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_s3_bucket_versioning.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
+| [aws_s3_object.MyIPSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object) | resource |
+| [aws_s3_object.MyThreatIntelSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_iam_policy_document.guard_duty_lists](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
@@ -63,10 +67,11 @@ No modules.
 | <a name="input_ip_set_active"></a> [ip\_set\_active](#input\_ip\_set\_active) | Specifies whether GuardDuty is to start using the uploaded IPSet | `string` | `false` | no |
 | <a name="input_ip_set_format"></a> [ip\_set\_format](#input\_ip\_set\_format) | The format of the file that contains the IPSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
 | <a name="input_ip_set_list_path"></a> [ip\_set\_list\_path](#input\_ip\_set\_list\_path) | The path of the IP safe list file | `string` | `""` | no |
+| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `any` | n/a | yes |
 | <a name="input_log_bucket"></a> [log\_bucket](#input\_log\_bucket) | Account level Log bucket id | `string` | n/a | yes |
 | <a name="input_member_list"></a> [member\_list](#input\_member\_list) | The list of member accounts to be added. Each member list need to have values of account\_id, member\_email and invite boolean | `list(any)` | `[]` | no |
 | <a name="input_member_list_count"></a> [member\_list\_count](#input\_member\_list\_count) | The count of members to be added to this master guard duty | `string` | `0` | no |
-| <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | n/a | `bool` | `true` | no |
+| <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | n/a | `string` | `"Disabled"` | no |
 | <a name="input_threat_intel_list_path"></a> [threat\_intel\_list\_path](#input\_threat\_intel\_list\_path) | The path of the Threat intel file | `string` | `""` | no |
 | <a name="input_threat_intel_set_active"></a> [threat\_intel\_set\_active](#input\_threat\_intel\_set\_active) | Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet | `string` | `false` | no |
 | <a name="input_threat_intel_set_format"></a> [threat\_intel\_set\_format](#input\_threat\_intel\_set\_format) | The format of the file that contains the ThreatIntelSet. Valid values: TXT \| STIX \| OTX\_CSV \| ALIEN\_VAULT \| PROOF\_POINT \| FIRE\_EYE | `string` | `"TXT"` | no |
