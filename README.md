@@ -103,8 +103,55 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
+                "guardduty:CreateDetector",
+                "guardduty:CreateIPSet",
+                "guardduty:CreateMembers",
+                "guardduty:CreateThreatIntelSet",
+                "guardduty:DeleteDetector",
+                "guardduty:DeleteIPSet",
+                "guardduty:DeleteMembers",
+                "guardduty:DeleteThreatIntelSet",
+                "guardduty:DescribeOrganizationConfiguration",
+                "guardduty:DisassociateMembers",
+                "guardduty:GetDetector",
+                "guardduty:GetIPSet",
+                "guardduty:GetMembers",
+                "guardduty:GetThreatIntelSet",
+                "guardduty:InviteMembers",
+                "guardduty:ListDetectors",
+                "guardduty:ListIPSets",
+                "guardduty:ListThreatIntelSets",
+                "guardduty:StartMonitoringMembers",
+                "guardduty:StopMonitoringMembers",
+                "guardduty:UpdateDetector",
+                "guardduty:UpdateIPSet",
+                "guardduty:UpdateOrganizationConfiguration",
+                "guardduty:UpdateThreatIntelSet"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateServiceLinkedRole",
+                "iam:DeleteRolePolicy",
+                "iam:GetRole",
+                "iam:PutRolePolicy"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
                 "s3:CreateBucket",
                 "s3:DeleteBucket",
+                "s3:DeleteBucketPolicy",
                 "s3:DeleteObject",
                 "s3:GetAccelerateConfiguration",
                 "s3:GetBucketAcl",
@@ -131,7 +178,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "s3:PutEncryptionConfiguration",
                 "s3:PutObject"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
