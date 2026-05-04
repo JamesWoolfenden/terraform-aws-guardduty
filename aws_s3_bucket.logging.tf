@@ -13,7 +13,6 @@ resource "aws_s3_bucket" "logging" {
   }
 
 }
-
 resource "aws_s3_bucket_server_side_encryption_configuration" "logging" {
   count  = (var.threat_intel_list_path == "") && (var.ip_set_list_path == "") ? 0 : 1
   bucket = aws_s3_bucket.logging[0].bucket

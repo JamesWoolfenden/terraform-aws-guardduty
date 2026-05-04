@@ -1,4 +1,3 @@
-
 resource "aws_guardduty_ipset" "MyIPSet" {
   count       = var.ip_set_list_path == "" ? 0 : 1
   activate    = var.ip_set_active
