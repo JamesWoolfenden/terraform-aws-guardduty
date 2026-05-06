@@ -3,6 +3,9 @@ resource "aws_s3_bucket" "guard_duty_lists" {
   # checkov:skip=CKV2_AWS_62: Event notifications not required for this bucket
   # checkov:skip=CKV_AWS_144:
   # checkov:skip=CKV_AWS_145:
+  # checkov:skip=CKV_AWS_18: logging via aws_s3_bucket_logging.guard_duty_lists
+  # checkov:skip=CKV_AWS_21: versioning via aws_s3_bucket_versioning.guard_duty_lists
+  # checkov:skip=CKV2_AWS_6: public access block via aws_s3_bucket_public_access_block.guard_duty_lists
 
   count  = (var.threat_intel_list_path == "") && (var.ip_set_list_path == "") ? 0 : 1
   bucket = "${local.account_name}-guardduty-lists"

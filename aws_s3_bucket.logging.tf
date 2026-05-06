@@ -5,8 +5,8 @@ resource "aws_s3_bucket" "logging" {
   # checkov:skip=CKV_AWS_144:
   # checkov:skip=CKV_AWS_145:
   # checkov:skip=CKV2_AWS_37: iTs already a logging bucket
-  #tfsec:ignore:AWS002
-  #tfsec:ignore:AWS077
+  # checkov:skip=CKV_AWS_18: this is the logging bucket
+  # checkov:skip=CKV2_AWS_6: public access block via aws_s3_bucket_public_access_block.logging
   count  = (var.threat_intel_list_path == "") && (var.ip_set_list_path == "") ? 0 : 1
   bucket = "${local.account_name}-guardduty-lists-logging"
 
