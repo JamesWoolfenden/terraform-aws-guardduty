@@ -28,7 +28,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -38,7 +38,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_guardduty_detector.master](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_detector) | resource |
 | [aws_guardduty_ipset.MyIPSet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_ipset) | resource |
 | [aws_guardduty_member.members](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/guardduty_member) | resource |
@@ -61,7 +61,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The account name. Used as a prefix to name resources. | `string` | `""` | no |
 | <a name="input_enable"></a> [enable](#input\_enable) | Enable/Disable guardduty.You can set the enable attribute to false for suspend monitoring and feedback reporting while keeping existing data. | `bool` | `true` | no |
 | <a name="input_ip_set_active"></a> [ip\_set\_active](#input\_ip\_set\_active) | Specifies whether GuardDuty is to start using the uploaded IPSet | `string` | `false` | no |
@@ -79,7 +79,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_GuardDuty"></a> [GuardDuty](#output\_GuardDuty) | The GuardDuty detector |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
